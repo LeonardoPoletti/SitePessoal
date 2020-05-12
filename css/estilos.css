@@ -1,13 +1,28 @@
 body{ 
-    background-image:url('https://www.costdrivers.com/wp-content/uploads/2019/06/data-science.jpg'); 
-    background-size: auto 100vh;
     font-family: Arial;
+  }
+
+  .bg-img {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    background-image: url('https://bdasolutions.com.br/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/01/shutterstock_610018373.jpg.webp');
+    background-size: auto 100vh;
     height: 100vh;
-  }
-  
-  .menu {
-    background-color: #4682B4;
-  }
+    filter: blur(2px);
+}
+
+.content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    margin-left: 20px;
+    margin-right: 20px;
+}
   
   .menu ul {
     display: flex;
@@ -19,7 +34,7 @@ body{
   }
   
   a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
   
@@ -29,10 +44,15 @@ body{
   
   .site-subtitle,
   .site-title {
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     text-align: center;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    font-size: 36;
+    margin-top: 100px
   }
   
   .site-subtitle {
     font-style: italic;
+    font-size: 24;
+    margin-top: 50px
   }
