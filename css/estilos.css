@@ -10,7 +10,7 @@ body {
   background-image: url('../img/fundo.webp');
   background-size: auto 100vh;
   height: 100vh;
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
 }
 
@@ -42,6 +42,7 @@ header {
 }
 
 .menu {
+  font-family: 'Teko', sans-serif;
   position: fixed;
   top: 10px;
   width: 100vw;
@@ -80,27 +81,58 @@ a:hover {
 
 .site-title {
   font-size: 4em;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .site-subtitle {
   font-style: italic;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.6em;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  color: rgb(255, 255, 255);
+  font-family: 'Teko', sans-serif;
+  margin: 1.5em;
+  font-size: 2em;
+}
+
+.portfolio .grid {
+  color: rgb(255, 255, 255);
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
-  width: 180px;
-  height: 160;
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20%;
 }
 
-figcaption {
-  color: rgb(255, 255, 255);
-}
 
-figure {
-  float: right;
-  width: 30%;
-  text-align: center;
-  font-style: italic;
-  text-indent: 0;
-  margin: 0.5em;
-  padding: 0.5em;
-}
+
