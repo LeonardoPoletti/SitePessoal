@@ -8,10 +8,11 @@
 body {
   display: block;
   background-image: url('../img/fundo.webp');
-  background-size: auto 100vh;
+  background-size: auto 110vh;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
+  background-attachment: fixed;
 }
 
 /* se a tela tiver pelo menos 400 px vai carregar estes estilos */
@@ -46,6 +47,7 @@ header {
   position: fixed;
   top: 10px;
   width: 100vw;
+  z-index: 1;
 }
 
 .menu ul {
@@ -60,8 +62,14 @@ header {
 .menu a {
   display: block;
   padding: 10px 20px;
+  transition: background-color 1.5s, color 1.5s;
 }
 
+.menu a:active,
+.menu a:hover {
+  background-color: white;
+  color: black;
+}
 
 a {
   color: rgb(255, 255, 255);
@@ -72,6 +80,22 @@ a:hover {
   text-decoration: underline;
 }
 
+/*
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  transition: all 2s;
+
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+*/
 .site-subtitle,
 .site-title {
   color: rgb(255, 255, 255);
@@ -90,31 +114,27 @@ a:hover {
   line-height: 1.6em;
 }
 
-.sobre {
-  padding: 2em;
-  height: 100vh;
-}
-
-.sobre h2 {
-  color: rgb(255, 255, 255);
-  font-family: 'Teko', sans-serif;
-  margin: 1.5em;
-  font-size: 2em;
-}
 
 .introducao,
+.enderecos,
 .apresentacao {
   font-family: 'Roboto', sans-serif;
   color: rgb(255, 255, 255);
   margin:15px 0;
   text-shadow: 2px 2px rgb(0, 0, 0);
+  text-align: justify;
+  margin: 3em;
 }
 
+.sobre,
+.contato,
 .portfolio {
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+.contato h2,
+.sobre h2,
 .portfolio h2 {
   color: rgb(255, 255, 255);
   font-family: 'Teko', sans-serif;
@@ -127,6 +147,7 @@ a:hover {
   display: grid;
   gap: 2em;
 }
+
 
 @media (min-width: 560px) {
   .portfolio .grid {
@@ -152,7 +173,25 @@ a:hover {
   object-fit: cover;
   object-position: center;
   border-radius: 20%;
+  transition: transform 2ms;
 }
 
+.img-portfolio:hover {
+  transform: scale(1.2) rotateX(45deg);
+}
 
+.contato .icons {
+  text-align: center;
+}
 
+.contato a {
+  color: rgb(255, 255, 255);
+  font-size: 4em;
+  transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(197, 231, 3, 0.733);
+}
