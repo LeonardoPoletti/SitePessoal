@@ -7,8 +7,8 @@
 
 body {
   display: block;
-  background-image: url('../img/fundo.webp');
-  background-size: auto 110vh;
+  background-image: url('../img/fundo.png');
+  background-size: auto 130vh;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
@@ -67,12 +67,12 @@ header {
 
 .menu a:active,
 .menu a:hover {
-  background-color: white;
-  color: black;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 a {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -98,9 +98,9 @@ a:hover {
 */
 .site-subtitle,
 .site-title {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-align: center;
-  text-shadow: 2px 2px rgb(0, 0, 0);
+  text-shadow: 4px 4px rgb(255, 255, 255);
 }
 
 .site-title {
@@ -114,36 +114,58 @@ a:hover {
   line-height: 1.6em;
 }
 
-
-.introducao,
-.enderecos,
-.apresentacao {
-  font-family: 'Roboto', sans-serif;
-  color: rgb(255, 255, 255);
-  margin:15px 0;
-  text-shadow: 2px 2px rgb(0, 0, 0);
-  text-align: justify;
-  margin: 3em;
-}
-
 .sobre,
 .contato,
 .portfolio {
   padding: 2em;
   min-height: 100vh;
+
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .contato h2,
 .sobre h2,
 .portfolio h2 {
-  color: rgb(255, 255, 255);
+  color: rgb(6, 167, 0);
+  text-shadow: 3px 3px rgb(10, 10, 10);
   font-family: 'Teko', sans-serif;
   margin: 1.5em;
   font-size: 2em;
 }
 
-.portfolio .grid {
+.sobre p {
+  font-family: 'Roboto', sans-serif;
   color: rgb(255, 255, 255);
+  text-indent: 1.4em;
+  text-shadow: 3px 3px rgb(0, 0, 0);
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+
+.sobre a {
+  color: rgb(6, 167, 0);
+}
+
+.sobre a:hover {
+  color: white;
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 2em;
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+
+
+.portfolio .grid {
+  color: rgb(6, 167, 0);
   display: grid;
   gap: 2em;
 }
@@ -165,6 +187,7 @@ a:hover {
 
 .portfolio figure {
   text-align: center;
+  font-weight: bold;
 }
 
 .img-portfolio {
@@ -177,11 +200,13 @@ a:hover {
 }
 
 .img-portfolio:hover {
-  transform: scale(1.2) rotateX(45deg);
+  transform: scale(1.1);
 }
+
 
 .contato .icons {
   text-align: center;
+  margin-top: 100px;
 }
 
 .contato a {
@@ -193,5 +218,16 @@ a:hover {
 .contato a:active,
 .contato a:hover {
   text-decoration: none;
-  text-shadow: 0px 0px 10px rgba(197, 231, 3, 0.733);
+  text-shadow: 0px 0px 50px rgba(6, 167, 0);
+}
+
+footer {
+  height: 40px;
+  margin-top: 400px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.6em;
+  color: rgb(255, 255, 255);
 }
